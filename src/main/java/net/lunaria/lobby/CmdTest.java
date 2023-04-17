@@ -14,7 +14,6 @@ public class CmdTest extends LunaCommand {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!super.onCommand(sender, command, label, args)) return false;
-        Player player = (Player) sender;
         player.sendMessage("§aTest réussi");
         player.sendMessage(String.valueOf(requiredPower));
         player.sendMessage(name);
