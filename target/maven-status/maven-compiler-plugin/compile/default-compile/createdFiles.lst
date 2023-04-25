@@ -1,8 +1,8 @@
-net/lunaria/lobby/CmdTest.class
-net/lunaria/lobby/scoreboard/Scoreboard.class
-net/lunaria/lobby/listener/JoinEvent.class
-net/lunaria/lobby/listener/QuitEvent.class
-net/lunaria/lobby/menu/MainMenu.class
-net/lunaria/lobby/listener/ItemsClickEvent.class
-net/lunaria/lobby/Lobby.class
-net/lunaria/lobby/listener/CancelledEvents.class
+net\lunaria\lobby\Lobby.class
+net\lunaria\lobby\listener\CancelledEvents.class
+net\lunaria\lobby\listener\JoinEvent.class
+net\lunaria\lobby\scoreboard\Scoreboard.class
+net\lunaria\lobby\CmdTest.class
+net\lunaria\lobby\listener\ItemsClickEvent.class
+net\lunaria\lobby\listener\QuitEvent.class
+net\lunaria\lobby\menu\MainMenu.class

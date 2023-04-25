@@ -2,7 +2,3 @@ name: Lobby
 author: Lunaria
 version: 1.0-SNAPSHOT
 main: net.lunaria.lobby.Lobby
-commands:
-  cmd:
-    description: test
-    aliases: "cmdst"

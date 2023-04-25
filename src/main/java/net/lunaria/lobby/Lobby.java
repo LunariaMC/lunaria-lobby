@@ -26,7 +26,7 @@ public class Lobby extends JavaPlugin {
         );
 
         CommandRegister.registerCommands(this,
-                new CmdTest("cmd", 7, false, true, "cmdst"));
+                new CmdTest());
         //RedisListenersRegister.registerListeners();
 
         (this.scoreboard = new Scoreboard()).updateAllTime();

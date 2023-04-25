@@ -1,25 +1,30 @@
 package net.lunaria.lobby;
 
+import net.lunaria.api.core.account.Subscription;
 import net.lunaria.api.plugins.bukkit.command.LunaCommand;
+import net.lunaria.api.plugins.bukkit.command.SubCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 public class CmdTest extends LunaCommand {
 
-    public CmdTest(String name, int requiredPower, boolean forSubscribed, boolean staffByPass, String... aliases) {
-        super(name, requiredPower, forSubscribed, staffByPass, aliases);
+    public CmdTest() {
+        super("test", 0, Subscription::isSubscribed, false, "cmdtest");
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!super.onCommand(sender, command, label, args)) return false;
-
-        player.sendMessage("§aTest réussi");
-        player.sendMessage(String.valueOf(requiredPower));
-        player.sendMessage(name);
-        player.sendMessage("PM:"+bukkitPlayer.getPowerMod());
-        player.sendMessage("isSubscribed:"+bukkitPlayer.getSubscription().isSubscribed());
+    public boolean onCommand(CommandSender sender, String label, String[] args) {
         return true;
     }
+
+    @Override
+    public void sendHelp() {
+        player.sendMessage("HELP");
+    }
+
+    @SubCommand(arg = "test", position = 0)
+    void testSubCommand() {
+        player.sendMessage("TEST");
+    }
+
 }
